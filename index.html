@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>仙人ブラウザ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>🧙‍♂️ 仙人ブラウザ - プライバシー重視</header>
+
+  <div id="toolbar">
+    <input id="urlInput" placeholder="URL または 検索ワード" />
+    <button onclick="navigate()">移動</button>
+    <button onclick="togglePrivate()">🕵️‍♂️</button>
+    <button onclick="toggleTor()">🧅</button>
+    <button onclick="addBookmark()">⭐</button>
+  </div>
+
+  <div id="controls">
+    <button onclick="viewBookmarks()">📚 ブックマーク</button>
+    <button onclick="viewHistory()">📜 履歴</button>
+    <button onclick="clearAll()">🧹 消去</button>
+  </div>
+
+  <iframe id="browserView"></iframe>
+  <div id="popup" hidden></div>
+
+  <script src="script.js"></script>
+  <script>
+    // サービスワーカー登録
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
