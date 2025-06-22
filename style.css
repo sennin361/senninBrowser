@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #111;
+  color: white;
+}
+header {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+}
+#toolbar, #controls {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: #333;
+}
+input {
+  flex: 1;
+  padding: 5px;
+}
+button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+iframe {
+  width: 100%;
+  height: calc(100vh - 160px);
+  border: none;
+}
+#popup {
+  background: #222;
+  padding: 10px;
+  max-height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
